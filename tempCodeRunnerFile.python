@@ -1,0 +1,17 @@
+import tkinter as tk
+def valider_texte():
+    texte = entree.get()
+    label.config(text=f"Vous avez entré : {texte}")
+root = tk.Tk()
+root.title("Interface avec Zone de Saisie")
+root.geometry("400x300")
+# Zone de saisie (Entry)
+entree = tk.Entry(root, width=30)
+entree.pack(pady=10)
+# Bouton de validation
+button = tk.Button(root, text="Valider", command=valider_texte)
+button.pack(pady=10)
+# Label pour afficher le texte entré
+label = tk.Label(root, text="", font=("Arial", 14))
+label.pack(pady=10)
+root.mainloop()
